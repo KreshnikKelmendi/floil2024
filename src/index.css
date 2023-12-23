@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.photo2{
+transform: rotate(-1deg);
+  animation : pulse 1s infinite;
+  animation-name            : pulse;
+  animation-duration        : 4s;
+  animation-iteration-count : infinite;
+}
+@keyframes pulse {
+  0%   { left:0px; top:0px;}
+  25%  { left:px; top:2px;}
+  50%  { left:5px; top:2px; transform: rotate(-2deg);}
+  75%  { left:0px; top:0px;}
+  100% { left:0px; top:0px;}
+} 
+
+.st0{
+  fill: none;
+  stroke: #F3C24E; 
+  stroke-width: 2.9px;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 0;
+  animation: text 4s ease-in-out infinite;
+}
+@keyframes text{
+  from{
+    stroke-dashoffset: 1200;
+  }to{
+    stroke-dashoffset: 0;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.firstOnCircle{
+  color: #F3C24E;
+  font-size: 38px;
+  font-weight: 600;
+  font-family: 'Bellarina', sans-serif;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0%   {color: white;}
+  100% {color: #F3C24E;}
+}
+
+.st1{
+  fill:none;
+  stroke: #F3C24E;
+  stroke-width: 2.9px;
+  stroke-dasharray: 1500;
+  stroke-dashoffset: 0;
+  animation: textTwo 3.9s ease-in infinite;
+}
+@keyframes textTwo{
+  from{
+    stroke-dashoffset: 1600;
+  }to{
+    stroke-dashoffset: 0;
+  }
+}
+
+.horizontalBg{
+  background-image: url(./components/assets/timelineVector.png);
+  background-position: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
