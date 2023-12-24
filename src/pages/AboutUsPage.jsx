@@ -2,6 +2,7 @@ import React from 'react'
 import bannerVec from "../components/assets/bannerVector.png"
 import floilPart from "../components/assets/rectangle17.png"
 import HorizontalTimeline from '../components/timeline/HorizontalTimeline'
+import FourDiv from '../components/timeline/FourDiv'
 
 const AboutUsPage = () => {
   return (
@@ -44,6 +45,7 @@ const AboutUsPage = () => {
     </div>
 
     <HorizontalTimeline />
+    <FourDiv />
     </>
   )
 }

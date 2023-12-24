@@ -34,6 +34,7 @@ const FloilCares = () => {
         <video
           ref={videoRef}
           autoPlay
+          playsInline
           loop
           muted={isMuted}
           className="absolute inset-0 w-full h-full object-cover"
