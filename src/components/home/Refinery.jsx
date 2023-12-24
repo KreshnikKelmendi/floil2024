@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import uzina from "../assets/uzine.png"
+import uzina from "../assets/rafinery.png"
 
 const Refinery = () => {
   const circleVariants = {

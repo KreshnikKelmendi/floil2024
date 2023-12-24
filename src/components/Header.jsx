@@ -25,9 +25,9 @@ const Header = () => {
             <ul className={`lg:flex ${isMenuOpen ? 'hidden' : 'lg:flex'} lg:space-x-[41px]`}>
               <li><Link to="/produktet-tona" className="text-white">Produktet</Link></li>
               <li><Link to="/historiku" className="text-white">Historiku</Link></li>
-              <li><a href="#" className="text-white">Rafineria</a></li>
+              <li><Link to="/rafineria-floil" className="text-white">Rafineria</Link></li>
               <li><a href="#" className="text-white">Receta Gatimi</a></li>
-              <li><a href="#" className="text-white">Kontakti</a></li>
+              <li><Link to="/kontakti" className="text-white">Kontakti</Link></li>
               <li><a href="#" className="text-white">Floil Cares</a></li>
             </ul>
           </div>
@@ -39,11 +39,11 @@ const Header = () => {
               X
             </button>
             <ul className={`lg:hidden ${isMenuOpen ? 'flex flex-col space-y-4 p-4' : 'hidden'}`}>
-              <li><a href="#" className="text-white">Produktet</a></li>
-              <li><a href="#" className="text-white">Historiku</a></li>
-              <li><a href="#" className="text-white">Rafineria</a></li>
+              <li><Link to="/produktet-tona" className="text-white">Produktet</Link></li>
+              <li><Link to="/historiku" className="text-white">Historiku</Link></li>
+              <li><Link to="/rafineria-floil" className="text-white">Rafineria</Link></li>
               <li><a href="#" className="text-white">Receta Gatimi</a></li>
-              <li><a href="#" className="text-white">Kontakti</a></li>
+              <li><Link to="/kontakti" className="text-white">Kontakti</Link></li>
               <li><a href="#" className="text-white">Floil Cares</a></li>
             </ul>
           </div>
