@@ -26,7 +26,7 @@ const FloilCares = () => {
         <div className='mt-8'>
           <button
             className='border-[2px] border-white rounded-md py-2 px-6 text-white font-sans'>
-                Shiko me shume
+                Shiko më shumë
             </button>
             </div>
       </div>

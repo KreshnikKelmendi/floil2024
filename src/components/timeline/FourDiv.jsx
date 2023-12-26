@@ -42,7 +42,7 @@ const FourDiv = () => {
         <button className="mt-8 border-[2px] hover:bg-[#434343] hover:text-white border-[#434343] px-[12px] py-[8px] text-[#434343] rounded-md font-semibold">Shiko produktin</button>
 </div>
       </div>
-      <div className="lg:w-1/2 mt-2 lg:mt-0">
+      <div className="lg:w-1/2 mt-4 lg:mt-0">
         <img src={floilImazh2} alt="" className="w-full h-auto" />
       </div>
     </div>

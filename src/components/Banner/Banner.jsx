@@ -23,7 +23,7 @@ const Banner = () => {
       {/* Text to the left */}
       <div className="z-40 absolute left-[70px] lg:left-[124px] top-1/2 transform -translate-y-1/2 text-white">
         <p className="text-[15px] lg:text-[40px] leading-[118%] font-semibold text-[#434343]">Nga fusha e luleve, <br />drejt tryezës tuaj!</p>
-        <button className="bg-[#DEB34C] text-white border-2 border-[#DEB34C] rounded-[4px] hover:text-[#DEB34C] hover:bg-white hover:border-none text-[12px] lg:text-[15px] w-[148px] lg:w-fit lg:px-[26px] py-1 lg:py-2 mt-[19px]">Shiko produktin</button>
+        <button className="bg-[#DEB34C] text-white border-2 border-[#DEB34C] rounded-[4px] hover:text-[#DEB34C] hover:bg-white hover:border-none text-[12px] lg:text-[15px] w-[120px] lg:w-fit lg:px-[26px] py-1 lg:py-2 mt-[19px]">Shiko produktin</button>
       </div>
 
       {/* Additional image with animation */}
