@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import RefineryPage from "./pages/RefineryPage";
+import FloilCaresPage from "./pages/FloilCaresPage";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/historiku" element={<AboutUsPage />} />
           <Route path="/kontakti" element={<ContactPage />} />
           <Route path="/rafineria-floil" element={<RefineryPage />} />
+          <Route path="/floil-cares" element={<FloilCaresPage />} />
         </Routes>
         <Footer />
     </BrowserRouter>

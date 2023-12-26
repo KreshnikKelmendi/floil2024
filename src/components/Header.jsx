@@ -1,103 +1,92 @@
+// src/components/Header.jsx
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from "./assets/floilLogo.png";
 import menu from "./assets/icons8-hamburger-menu-24.png";
+import caresLogo from "./assets/Layer_1.png"
+import anotherMenuImage from "./assets/menu-bar.png"
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+    window.scrollTo({ top: 0, left: 0 });
+    
+  };
+
   return (
-    <header className="bg-[#DEB34C] h-[100px] px-5 lg:px-[124px] font-sans text-[15px] font-normal">
+    <header className={`h-[100px] px-5 lg:px-[124px] font-sans text-[15px] font-normal ${
+        location.pathname === '/floil-cares' ? 'bg-white' : 'bg-[#DEB34C]'
+    }`}>
       <div className="flex items-center justify-between h-full">
-        <Link to="/"><img src={logo} alt='' className='w-[77px] h-[43px] object-cover' /></Link>
-        <button
-          className="lg:hidden text-white focus:outline-none"
-          onClick={toggleMenu}
+      <Link to="/" onClick={handleLinkClick}><img src={location.pathname === '/floil-cares' ? caresLogo : logo} alt='' className='w-[77px] h-auto' /></Link>
+      <button
+            className="lg:hidden text-white w-5 h-auto focus:outline-none"
+            onClick={toggleMenu}
         >
-          {isMenuOpen ? 'Close' : <img src={menu} alt="" />}
+            {isMenuOpen ? 'Close' : (
+        <img
+            src={location.pathname === '/floil-cares' ? anotherMenuImage : menu}
+            alt=""
+        />
+        )}
         </button>
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.nav
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              className="lg:flex block fixed top-0 right-0 h-full w-1/2 z-50 bg-[#DEB34C] text-white overflow-y-auto"
+
+        <nav className={`lg:flex ${isMenuOpen ? 'block fixed top-0 right-0 h-full w-1/2 z-50 text-white overflow-y-auto transform translate-x-0' : 'hidden'} ${location.pathname === '/floil-cares' ? 'bg-white' : 'bg-[#DEB34C]'}`}>
+          <div className={`lg:flex lg:items-center lg:justify-end ${isMenuOpen ? 'hidden' : 'lg:block'}`}>
+            <ul className={`lg:flex ${isMenuOpen ? 'hidden' : 'lg:flex'} lg:space-x-[41px]`}>
+              <li><Link to="/produktet-tona" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Produktet</Link></li>
+              <li><Link to="/historiku" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Historiku</Link></li>
+              <li><Link to="/rafineria-floil" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Rafineria</Link></li>
+              <li><a href="#" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Receta Gatimi</a></li>
+              <li><Link to="/kontakti" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Kontakti</Link></li>
+              <li>
+                <Link
+                  to="/floil-cares"
+                  onClick={handleLinkClick}
+                  className={`text-white border-[2px] rounded-md py-2 px-8 hover:bg-[#60C5EF] hover:text-black hover:border-[#60C5EF] ${
+                    location.pathname === '/floil-cares' ? 'hidden' : ''
+                  }`}
+                >
+                  Floil Cares
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="flex flex-col items-center justify-center h-full">
+            <button
+             
+              className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] absolute top-4 right-4 font-semibold lg:hidden': 'absolute top-4 right-4 text-white text-xl lg:hidden focus:outline-none'}`}
+              onClick={toggleMenu}
             >
-              <div className={`lg:flex lg:items-center lg:justify-end ${isMenuOpen ? 'hidden' : 'lg:block'}`}>
-                <motion.ul
-                  initial="hidden"
-                  animate="visible"
-                  variants={{
-                    hidden: { opacity: 0 },
-                    visible: { opacity: 1, transition: { delay: 0.2, staggerChildren: 0.1 } },
-                  }}
-                  className={`lg:flex ${isMenuOpen ? 'hidden' : 'lg:flex'} lg:space-x-[41px]`}
+              X
+            </button>
+            <ul className={`lg:hidden ${isMenuOpen ? 'flex uppercase flex-col space-y-10 text-center p-4' : 'hidden'}`}>
+              <li><Link to="/produktet-tona" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Produktet</Link></li>
+              <li><Link to="/historiku" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Historiku</Link></li>
+              <li><Link to="/rafineria-floil" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Rafineria</Link></li>
+              <li><a href="#" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Receta Gatimi</a></li>
+              <li><Link to="/kontakti" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Kontakti</Link></li>
+              <li>
+                <Link
+                  to="/floil-cares"
+                  onClick={handleLinkClick}
+                  className={`text-white border-[2px] rounded-md py-2 px-8 hover:bg-[#60C5EF] hover:text-black hover:border-[#60C5EF] ${
+                    location.pathname === '/floil-cares' ? 'hidden' : ''
+                  }`}
                 >
-                  <motion.li variants={{ visible: { y: 0 } }}>
-                    <Link to="/produktet-tona" className="text-white">Produktet</Link>
-                  </motion.li>
-                  <motion.li variants={{ visible: { y: 0.1 } }}>
-                    <Link to="/historiku" className="text-white">Historiku</Link>
-                  </motion.li>
-                  <motion.li variants={{ visible: { y: 0.2 } }}>
-                    <Link to="/rafineria-floil" className="text-white">Rafineria</Link>
-                  </motion.li>
-                  <motion.li variants={{ visible: { y: 0.3 } }}>
-                    <a href="#" className="text-white">Receta Gatimi</a>
-                  </motion.li>
-                  <motion.li variants={{ visible: { y: 0.4 } }}>
-                    <Link to="/kontakti" className="text-white">Kontakti</Link>
-                  </motion.li>
-                  <motion.li variants={{ visible: { y: 0.5 } }}>
-                    <a href="#" className="text-white">Floil Cares</a>
-                  </motion.li>
-                </motion.ul>
-              </div>
-              <div className="flex flex-col items-center justify-center h-full">
-                <button
-                  className="absolute top-4 right-4 text-white text-xl lg:hidden focus:outline-none"
-                  onClick={toggleMenu}
-                >
-                  X
-                </button>
-                <motion.ul
-                  initial="hidden"
-                  animate="visible"
-                  variants={{
-                    hidden: { opacity: 0 },
-                    visible: { opacity: 1, transition: { delay: 0.2, staggerChildren: 0.1 } },
-                  }}
-                  className={`lg:hidden ${isMenuOpen ? 'flex uppercase flex-col space-y-10 text-center p-4' : 'hidden'}`}
-                >
-                  <motion.li variants={{ visible: { y: 0 } }}>
-                    <Link to="/produktet-tona" className="text-white font-sans font-semibold">Produktet</Link>
-                  </motion.li>
-                  <motion.li variants={{ visible: { y: 0.1 } }}>
-                    <Link to="/historiku" className="text-white font-sans font-semibold">Historiku</Link>
-                  </motion.li>
-                  <motion.li variants={{ visible: { y: 0.2 } }}>
-                    <Link to="/rafineria-floil" className="text-white font-sans font-semibold">Rafineria</Link>
-                  </motion.li>
-                  <motion.li variants={{ visible: { y: 0.3 } }}>
-                    <a href="#" className="text-white font-sans font-semibold">Receta Gatimi</a>
-                  </motion.li>
-                  <motion.li variants={{ visible: { y: 0.4 } }}>
-                    <Link to="/kontakti" className="text-white font-sans font-semibold">Kontakti</Link>
-                  </motion.li>
-                  <motion.li variants={{ visible: { y: 0.5 } }}>
-                    <a href="#" className="text-white font-sans font-semibold">Floil Cares</a>
-                  </motion.li>
-                </motion.ul>
-              </div>
-            </motion.nav>
-          )}
-        </AnimatePresence>
+                  Floil Cares
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
   );

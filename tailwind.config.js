@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': ['Poppins', 'sans-serif'],
-        'sans1': ['Bellarina']
+        'sans1': ['Bellarina'],
+        'sans2' : ['The Foregen', 'sans-serif']
       },
     },
   },
