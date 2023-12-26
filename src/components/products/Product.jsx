@@ -6,16 +6,6 @@ import rapsol from "../assets/FLOIL-RAPSEED.png";
 import margarine from "../assets/butter_package.png";
 
 const Product = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: '-100px 0px',
-  });
-
-  const variants = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   const products = [
     {
       id: 1,
@@ -46,44 +36,48 @@ const Product = () => {
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-3 justify-center mt-8'>
-        {products.map((product, index) => (
-          <motion.div
-            key={product.id}
-            ref={ref}
-            className='m-4 rounded-md overflow-hidden'
-            initial={{ opacity: 0, y: 100 }}
-            animate={inView ? 'visible' : 'hidden'}
-            variants={variants}
-            transition={{ delay: index * 0.2 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <motion.div
-              className='bg-[#F6F6F6] p-4 h-[379px]'
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ delay: index * 0.2 }}
-            >
-              <img
-                src={product.image}
-                alt={product.title}
-                className='w-full h-80 object-contain mb-2 rounded-md'
-              />
-            </motion.div>
-            <motion.div
-              className='bg-[#F3C24E] h-[78px] items-center px-4 justify-between flex text-white'
-              initial={{ opacity: 0, y: 50 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ delay: index * 0.2 }}
-            >
-              <button className='border-[2px] border-white p-[6px] hover:bg-white rounded-md hover:text-[#F3C24E] font-sans'>
-                Shiko produktin
-              </button>
-              <p className='text-center font-sans font-extrabold'>{product.title}</p>
-            </motion.div>
-          </motion.div>
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </div>
+  );
+};
+
+const ProductCard = ({ product }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, ease: 'easeOut' },
+    },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={inView ? 'visible' : 'hidden'}
+      variants={cardVariants}
+      className='m-4 rounded-md overflow-hidden'
+    >
+      <div className='bg-[#F6F6F6] p-4 h-[379px]'>
+        <img
+          src={product.image}
+          alt={product.title}
+          className='w-full h-80 object-contain mb-2 rounded-md'
+        />
+      </div>
+      <div className='bg-[#F3C24E] h-[78px] items-center px-4 justify-between flex text-white'>
+        <button className='border-[2px] border-white p-[6px] hover:bg-white rounded-md hover:text-[#F3C24E] font-sans'>Shiko produktin</button>
+        <p className='text-center font-sans font-extrabold'>{product.title}</p>
+      </div>
+    </motion.div>
   );
 };
 
