@@ -1,6 +1,5 @@
 import React from 'react'
-import RecipeList from './RecipeList'
-import RecipeGrid from './RecipeCard'
+import RecipeCard from './RecipeCard'
 
 const Recipes = () => {
   return (
@@ -13,7 +12,8 @@ const Recipes = () => {
              Recetat shijojnë më mirë me produktet Floil!
         </p>
     </div>
-    <RecipeGrid />
+
+    <RecipeCard />
     </>
   )
 }

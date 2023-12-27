@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import uzina from "../assets/rafinery.png"
+import { Link } from 'react-router-dom';
 
 const Refinery = () => {
   const circleVariants = {
@@ -27,6 +28,9 @@ const Refinery = () => {
             lartë kanë kontribuar në popullaritetin e saj në mesin e konsumatorëve,
             të cilët vlerësojnë cilësinë e vajit tonë dhe përfitimet e tij shëndetësore.
           </p>
+          <Link to="/rafineria-floil" onClick={() => window.scrollTo({top: 0,left: 0})}>
+            <button className='mt-[39px] font-semibold font-sans border-2 border-[#249A70] lg:px-[13px] py-1 px-4 lg:py-[10px] text-[#249A70] hover:bg-[#249A70] hover:text-white text-[15px] rounded-[5px]'>Shiko më shumë</button>
+          </Link>
         </div>
     </div>
     <div className='flex'>

@@ -1,28 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import floil from "../assets/Floik_Bottle.png";
-import rapsol from "../assets/FLOIL-RAPSEED.png";
-import margarine from "../assets/butter_package.png";
+import { products } from '../../data/products';
+import { Link } from 'react-router-dom';
 
 const Product = () => {
-  const products = [
-    {
-      id: 1,
-      title: 'Vaj Luledielli',
-      image: floil
-    },
-    {
-      id: 2,
-      title: 'Vaj Rapsol',
-      image: rapsol
-    },
-    {
-      id: 3,
-      title: 'Margarinë',
-      image: margarine
-    },
-  ];
 
   return (
     <div>
@@ -36,7 +18,7 @@ const Product = () => {
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-3 justify-center mt-8'>
-        {products.map((product) => (
+        {products?.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
@@ -74,7 +56,9 @@ const ProductCard = ({ product }) => {
         />
       </div>
       <div className='bg-[#F3C24E] h-[78px] items-center px-4 justify-between flex text-white'>
-        <button className='border-[2px] border-white p-[6px] hover:bg-white rounded-md hover:text-[#F3C24E] font-sans'>Shiko produktin</button>
+            <Link to={`/produktet-tona/${product.id}`} onClick={() => window.scrollTo({top: 0, left: 0})}>
+                <button className='border-[2px] border-white p-[6px] hover:bg-white rounded-md hover:text-[#F3C24E] font-sans font-semibold'>Shiko produktin</button>
+            </Link>
         <p className='text-center font-sans font-extrabold'>{product.title}</p>
       </div>
     </motion.div>

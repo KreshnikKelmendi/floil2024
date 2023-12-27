@@ -44,7 +44,7 @@ const Header = () => {
               <li><Link to="/produktet-tona" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Produktet</Link></li>
               <li><Link to="/historiku" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Historiku</Link></li>
               <li><Link to="/rafineria-floil" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Rafineria</Link></li>
-              <li><a href="#" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Receta Gatimi</a></li>
+              <li><Link to="/recetat" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Receta Gatimi</Link></li>
               <li><Link to="/kontakti" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Kontakti</Link></li>
               <li>
                 <Link
@@ -71,7 +71,7 @@ const Header = () => {
               <li><Link to="/produktet-tona" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Produktet</Link></li>
               <li><Link to="/historiku" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Historiku</Link></li>
               <li><Link to="/rafineria-floil" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Rafineria</Link></li>
-              <li><a href="#" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Receta Gatimi</a></li>
+              <li><Link to="/recetat" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Receta Gatimi</Link></li>
               <li><Link to="/kontakti" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Kontakti</Link></li>
               <li>
                 <Link

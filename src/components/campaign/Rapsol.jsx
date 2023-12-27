@@ -1,11 +1,11 @@
 import React from 'react';
-import rapsolImage from "../assets/oilFloil.png"; // Replace with the actual path to your image
+import rapsolImage from "../assets/oilFloil.png";
 
 const Rapsol = () => {
   return (
     <div className="flex">
       <div className="w-1/2 flex">
-        <img src={rapsolImage} alt="Rapsol Image" className="w-full object-cover" />
+        <img src={rapsolImage} alt="Rapsol" className="w-full object-cover" />
       </div>
       <div className="py-4 px-4 lg:px-[70px] w-1/2 flex bg-[#249A70] text-white justify-center items-center">
         <div>

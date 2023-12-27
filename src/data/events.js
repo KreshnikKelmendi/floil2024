@@ -6,10 +6,10 @@ import thirdEvent from "../components/assets/thirdEvent.png"
 const events = [
     {
         id: 1,
-        name: "Kampanja 1 cent - dhuro pak, ndihmo shume",
+        name: "Kampanja 1 cent - dhuro pak, ndihmo shumë",
         description: "",
         img: firstCaresImage,
-        desc: "Qëllimi i kampanjës ka qenë sensibilizimi i shoqërisë rrethbamirësisë ku të gjithë bëhen pjesë e ndihmës përmes blerjes sërregullt të vajit Floil, pa pasur nevojë të dhurojnë shuma shtesë.Me blerjen e produktit vendor, Floil, konsumatorët përveç qëmbështesnin prodhimin vendor po ashtu mbështesnin shoqatënDown Syndrome Kosova dhe komitetin Paralimpik të Kosovës. Floil pati një sukses të madh përmes kësaj kampanje ku arriti të mbledhë nga 8227.95€ brenda katër muajsh për të dykomunitetet.Fondacioni “Floil Cares” vazhdon të punojë në ideimin e kampanjave tjera të cilat do ndihmojnë drejtpërdrejtë edhekomunitetet tjera në nevojë në Kosovë.",
+        desc: "Qëllimi i kampanjës ka qenë sensibilizimi i shoqërisë rreth bamirësisë ku të gjithë bëhen pjesë e ndihmës përmes blerjes së rregullt të vajit Floil, pa pasur nevojë të dhurojnë shuma shtesë. Me blerjen e produktit vendor, Floil, konsumatorët përveç që mbështesnin prodhimin vendor po ashtu mbështesnin shoqatën Down Syndrome Kosova dhe komitetin Paraolimpik të Kosovës. Floil pati një sukses të madh përmes kësaj kampanje ku arriti të mbledhë nga 8227.95€ brenda katër muajsh për të dy komunitetet. Fondacioni “Floil Cares” vazhdon të punojë në ideimin e kampanjave tjera të cilat do ndihmojnë drejtpërdrejtë edhe komunitetet tjera në nevojë në Kosovë.",
         color: "green"
       
     },{
