@@ -85,6 +85,12 @@ const Header = () => {
                 </Link>
               </li>
             </ul>
+            <div className='lg:hidden flex text-white gap-x-6 mt-12 cursor-pointer'>
+           
+                  <a href="https://www.facebook.com/floilofficial" target="_blank" rel="noreferrer"><i className="fab fa-facebook-f text-2xl"></i></a>
+                  <a href="https://www.instagram.com/floilofficial/" target="_blank" rel="noreferrer"><i className="fab fa-instagram text-2xl"></i></a>
+               
+            </div>
           </div>
         </nav>
       </div>

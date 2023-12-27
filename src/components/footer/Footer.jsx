@@ -1,6 +1,7 @@
 import React from 'react';
 import footerBackgroundImage from '../assets/footerImage.png';
 import endImage from '../assets/floilLogo.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -18,19 +19,19 @@ const Footer = () => {
         {/* Menu Links Section */}
         <div className="md:w-full mb-6 md:mb-0">
           <ul className="list-none p-0 font-sans font-bold leading-6 text-[13px]">
-            <li className="block mb-2 md:mb-1 text-white">Produktet</li>
-            <li className="block mb-2 md:mb-1 text-white">Historiku</li>
-            <li className="block mb-2 md:mb-1 text-white">Rafineria</li>
-            <li className="block mb-2 md:mb-1 text-white">Receta Gatimi</li>
-            <li className="block mb-2 md:mb-1 text-white">Kontakti</li>
-            <li className="block mb-2 md:mb-1 text-white">Floil Cares</li>
+            <Link to="/produktet-tona" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Produktet</li></Link>
+            <Link to="/historiku" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Historiku</li></Link>
+            <Link to="/rafinera-floil" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Rafineria</li></Link>
+            <Link to="/recetat" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Receta Gatimi</li></Link>
+            <Link t="/kontakti" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Kontakti</li></Link>
+            <Link to="/floil-cares" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Floil Cares</li></Link>
           </ul>
         </div>
 
         {/* List Section */}
         <div className="md:w-full lg:ml-28 mb-6 md:mb-0">
           <ul className="list-none p-0 font-sans font-bold leading-6 text-[13px]">
-            <li className="block mb-2 md:mb-1 text-white">Rafineria</li>
+            <Link to="/rafineria-floil" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Rafineria</li></Link>
             <li className="block mb-2 md:mb-1 text-white">Neutralizimi</li>
             <li className="block mb-2 md:mb-1 text-white">Zbardhimi</li>
             <li className="block mb-2 md:mb-1 text-white">Kristalizimi</li>

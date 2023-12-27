@@ -1,7 +1,10 @@
 import React from 'react';
 import rapsolImage from "../assets/oilFloil.png";
+import { products } from '../../data/products';
+import { Link } from 'react-router-dom';
 
 const Rapsol = () => {
+  const secondProduct = products[1]
   return (
     <div className="flex">
       <div className="w-1/2 flex">
@@ -13,7 +16,9 @@ const Rapsol = () => {
           <p className="text-[13px] lg:w-[80%] mt-8">
             Vaji Rapsol, i njohur si Rapeseed apo Canola oil, njihet si vaji më i shëndetshëm nga të gjitha vajrat për pjekje dhe gatim.
           </p>
-          <button className="mt-8 bg-[#249A70] border-[2px] hover:bg-white hover:text-[#249A70] border-white px-[12px] py-[8px] text-white rounded-md font-semibold">Shiko produktin</button>
+          <Link to={`/produktet-tona/${secondProduct.id}`} onClick={() => window.scrollTo({top: 0,left: 0})}>
+            <button className="mt-8 bg-[#249A70] border-[2px] hover:bg-white hover:text-[#249A70] border-white px-[12px] py-[8px] text-white rounded-md font-semibold">Shiko produktin</button>
+          </Link>
         </div>
       </div>
     </div>

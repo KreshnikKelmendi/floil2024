@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import videoSource from '../assets/FINAL.mp4'; // Replace with the actual path to your video file
+import { Link } from 'react-router-dom';
 
 const FloilCares = () => {
   const videoRef = useRef(null);
@@ -24,10 +25,12 @@ const FloilCares = () => {
           komuniteteve në nevojë në Kosovë.
         </p> 
         <div className='mt-8'>
-          <button
-            className='border-[2px] border-white rounded-md py-2 px-6 text-white font-sans'>
-                Shiko më shumë
+          <Link to="/floil-cares" onClick={() => window.scrollTo({top: 0,left: 0})}>
+            <button
+              className='border-[2px] border-white rounded-md py-2 px-6 text-white font-sans hover:bg-white hover:text-[#848484]'>
+                  Shiko më shumë
             </button>
+          </Link>
             </div>
       </div>
       <div className="lg:w-1/2 lg:mt-0 relative pb-[100%] lg:pb-[6.25%] 2xl:pb-[35.25%]">

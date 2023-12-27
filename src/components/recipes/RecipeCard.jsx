@@ -20,7 +20,7 @@ const RecipeCard = () => {
             
         </div>
         <Link to="/recetat" onClick={() => window.scrollTo({top: 0,left: 0})}>
-            <p className='mx-auto text-center mt-[37px] text-[#BFBFBF] hover:text-[#249A70] cursor-pointer font-semibold text-[12px]'>View all</p>
+            <p className='mx-auto text-center mt-[37px] text-[#BFBFBF] hover:text-[#249A70] cursor-pointer font-semibold text-[12px]'>Shiko të gjitha</p>
         </Link>
     </div>
   )
