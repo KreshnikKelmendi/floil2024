@@ -23,7 +23,7 @@ const Footer = () => {
             <Link to="/historiku" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Historiku</li></Link>
             <Link to="/rafinera-floil" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Rafineria</li></Link>
             <Link to="/recetat" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Receta Gatimi</li></Link>
-            <Link t="/kontakti" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Kontakti</li></Link>
+            <Link to="/kontakti" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Kontakti</li></Link>
             <Link to="/floil-cares" onClick={() => window.scrollTo({top: 0,left: 0})}><li className="block mb-2 md:mb-1 text-white">Floil Cares</li></Link>
           </ul>
         </div>
@@ -58,7 +58,9 @@ const Footer = () => {
 
         {/* Image Logo Section */}
         <div className="md:w-full lg:ml-28 flex justify-center items-center">
-          <img className="w-[132px] h-[73px] object-cover" src={endImage} alt="" />
+          <Link to="/" onClick={() => window.scrollTo({top: 0,left: 0})}>
+            <img className="w-[132px] h-[73px] object-cover" src={endImage} alt="" />
+          </Link>
         </div>
       </div>
     </div>

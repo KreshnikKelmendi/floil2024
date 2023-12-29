@@ -25,7 +25,7 @@ const SinglePageOfProducts = () => {
         </div>
         
         <div className='w-full flex flex-col lg:flex-row lg:px-[151px]'>
-            <div className='lg:w-1/2 z-50'>
+            <div className='lg:w-1/2 z-40'>
                 <img className='w-72 mx-auto lg:mx-0 h-auto lg:w-[414px] lg:h-[767px] lg:object-cover' src={image} alt={title} />
             </div>
             <div className='px-4 lg:w-1/2 mt-6 lg:mt-[123px]'>

@@ -69,9 +69,9 @@ const CategoryRecipes = () => {
           ) : (
             data?.map((recipe, key) => (
               <div className='lg:w-full 2xl:w-[379px] relative' key={key}>
-                <img src={recipe?.img} alt='' className='lg:w-[379px] lg:h-[210px] object-cover rounded-t-xl' />
+                <img src={recipe?.img} alt='' className='w-[379px] h-[210px] object-cover rounded-t-xl' />
                 <p className='absolute top-[188px] rounded-tl-lg rounded-bl-lg text-[12px] font-sans uppercase text-white right-0 px-[26px] py-[13px] bg-[#249A70] font-semibold'>{recipe?.name}</p>
-                <div className='bg-[#F6F6F6] h-[247px] rounded-b-xl py-[52px] px-[23px]'>
+                <div className='bg-[#F6F6F6] w-[379px] lg:w-full h-[247px] rounded-b-xl py-[52px] px-[23px]'>
                   <p className='text-[16.6px] text-[#434343] text-sans font-semibold'>{recipe?.recipe}</p>
                   <p className='mt-[28px] text-[10.26px] text-[#848484]'>{recipe?.afterTitle}</p>
                   <Link to={`/recetat/${recipe.id}`} onClick={() => window.scrollTo({top: 0, left: 0})}>

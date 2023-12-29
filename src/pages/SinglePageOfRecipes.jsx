@@ -46,6 +46,35 @@ const SinglePageOfRecipes = () => {
     <div className='lg:px-[120px] mt-[35px] px-4'>
         <img src={img} alt='' className='h-[396px] w-full object-cover rounded-[20px]'/>
     </div>
+
+    
+        <div className='grid lg:grid-cols-3 gap-x-[17px] gap-y-[17px] w-full lg:px-[120px] px-4 h-fit lg:h-[273px] mt-[55px]'>
+            <div className='py-[38px] rounded-[20px] border-[2px] border-[#249A70]'>
+                <p className=' ml-[33px] text-[16.6px] text-[#434343]'>Hapi i parë</p>
+                <p className='text-[10.26px] font-sans font-normal px-[33px] mt-[30px] text-[#434343]'>{firstPrep}</p>
+            </div>
+            <div className='py-[38px] rounded-[20px] border-[2px] border-[#249A70]'>
+                <p className='ml-[33px] text-[16.6px] text-[#434343]'>Hapi i dytë</p>
+                <p className='text-[10.26px] font-sans font-normal px-[33px] mt-[30px] text-[#434343]'>{secondPrep}</p>
+            </div>
+            <div className='font-sans py-[38px] rounded-[20px] bg-[#249A70]'>
+            <p className='ml-[33px] text-[16.6px] text-white'>Përbërësit</p>
+            <div className='px-[33px] text-white'>
+                <ul className='grid grid-cols-2 text-[10px] mt-[30px] gap-y-2'>
+                    <li>{firstIngr}</li>
+                    <li>{secondIngr}</li>
+                    <li>{thirdIngr}</li>
+                    <li>{fourthIngr}</li>
+                    <li>{fifthIngr}</li>
+                    <li>{sixthIngr}</li>
+                    <li>{seventhIngr}</li>
+                    <li>{eighthIngr}</li>
+                    <li>{ninthIngr}</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    
     </>
   )
 }

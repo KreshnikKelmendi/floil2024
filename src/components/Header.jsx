@@ -19,6 +19,7 @@ const Header = () => {
     window.scrollTo({ top: 0, left: 0 });
     
   };
+  
 
   return (
     <header className={`h-[100px] px-5 lg:px-[124px] font-sans text-[15px] font-normal ${
