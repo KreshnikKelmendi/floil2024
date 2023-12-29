@@ -9,6 +9,7 @@ import RefineryPage from "./pages/RefineryPage";
 import FloilCaresPage from "./pages/FloilCaresPage";
 import RecipesPage from "./pages/RecipesPage";
 import SinglePageOfProducts from "./pages/SinglePageOfProducts";
+import SinglePageOfRecipes from "./pages/SinglePageOfRecipes";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/rafineria-floil" element={<RefineryPage />} />
           <Route path="/floil-cares" element={<FloilCaresPage />} />
           <Route path="/recetat" element={<RecipesPage />} />
+          <Route path="/recetat/:recipeID" element={<SinglePageOfRecipes />} />
         </Routes>
         <Footer />
     </BrowserRouter>

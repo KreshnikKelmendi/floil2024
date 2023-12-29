@@ -70,19 +70,19 @@ const Header = () => {
             <ul className={`lg:hidden ${isMenuOpen ? 'flex uppercase flex-col space-y-10 text-center p-4' : 'hidden'}`}>
               <li><Link to="/produktet-tona" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Produktet</Link></li>
               <li><Link to="/historiku" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Historiku</Link></li>
-              <li><Link to="/rafineria-floil" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Rafineria</Link></li>
+              <li><Link to="/rafineria-floil" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-bold'}`}>Rafineria</Link></li>
               <li><Link to="/recetat" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Receta Gatimi</Link></li>
               <li><Link to="/kontakti" onClick={handleLinkClick} className={`${location.pathname === '/floil-cares' ? 'text-[#60C5EF] font-semibold': 'text-white font-semibold'}`}>Kontakti</Link></li>
               <li>
                 <Link
                   to="/floil-cares"
                   onClick={handleLinkClick}
-                  className={`text-white border-[2px] rounded-md py-2 px-8 hover:bg-[#60C5EF] hover:text-black hover:border-[#60C5EF] ${
+                  className={`text-white border-[2px] rounded-md py-2 px-8 border-white hover:bg-[#60C5EF] hover:text-black hover:border-[#60C5EF] ${
                     location.pathname === '/floil-cares' ? 'hidden' : ''
                   }`}
                 >
                   Floil Cares
-                </Link>
+                </Link> 
               </li>
             </ul>
             <div className='lg:hidden flex text-white gap-x-6 mt-10 cursor-pointer'>
