@@ -1,6 +1,6 @@
 import React from 'react'
 import bannerVec from "../components/assets/bannerVector.png";
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { recipeData } from '../data/recipeData';
 
 const SinglePageOfRecipes = () => {
@@ -35,13 +35,14 @@ const SinglePageOfRecipes = () => {
                     </p>
                 </div>
     </div>
-
-    <button className='flex border-[2px] mt-[39px] ml-[120px] py-[11px] gap-x-[16px] px-[16px]  rounded-[4px] border-[#434343]'>
-        <svg className='mt-1' width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 6.5002C0.00826736 6.71144 0.0954885 6.95566 0.240788 7.10962L5.57423 12.7232C5.8857 13.0911 6.48467 13.0837 6.83478 12.7521C7.18491 12.4205 7.21364 11.8335 6.86124 11.5044L2.95365 7.3865H15.111C15.6019 7.3865 16 6.98957 16 6.50009C16 6.01061 15.6019 5.61368 15.111 5.61368H2.95365L6.86124 1.49576C7.21364 1.16664 7.1847 0.577015 6.83458 0.245423C6.48445 -0.08618 5.87678 -0.0876205 5.57402 0.276955L0.240581 5.89054C0.0783344 6.06242 0.00248153 6.26318 0 6.5002Z" fill="#434343"/>
-        </svg>
-           Kthehu mbrapa
-    </button>
+    <Link to="/recetat" onClick={() => window.scrollTo({top: 0,left: 0})}>
+        <button className='flex border-[2px] mt-[39px] ml-[120px] py-[11px] gap-x-[16px] px-[16px] hover:bg-black hover:border-black hover:text-white  rounded-[4px] border-[#434343]'>
+            <svg className='mt-1' width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 6.5002C0.00826736 6.71144 0.0954885 6.95566 0.240788 7.10962L5.57423 12.7232C5.8857 13.0911 6.48467 13.0837 6.83478 12.7521C7.18491 12.4205 7.21364 11.8335 6.86124 11.5044L2.95365 7.3865H15.111C15.6019 7.3865 16 6.98957 16 6.50009C16 6.01061 15.6019 5.61368 15.111 5.61368H2.95365L6.86124 1.49576C7.21364 1.16664 7.1847 0.577015 6.83458 0.245423C6.48445 -0.08618 5.87678 -0.0876205 5.57402 0.276955L0.240581 5.89054C0.0783344 6.06242 0.00248153 6.26318 0 6.5002Z" fill="#434343"/>
+            </svg>
+            Kthehu mbrapa
+        </button>
+    </Link>
 
     <div className='lg:px-[120px] mt-[35px] px-4'>
         <img src={img} alt='' className='h-[396px] w-full object-cover rounded-[20px]'/>

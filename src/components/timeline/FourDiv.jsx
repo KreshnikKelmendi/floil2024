@@ -1,8 +1,13 @@
 import React from 'react'
 import floilImazh from "../assets/Imazh.png"
 import floilImazh2 from "../assets/floil2023.png"
+import { Link } from 'react-router-dom'
+import { products } from '../../data/products'
 
 const FourDiv = () => {
+  const firstProduct = products[0]
+  const secondProduct = products[1]
+
   return (
     <>
     <div className="flex flex-col lg:flex-row">
@@ -18,7 +23,9 @@ const FourDiv = () => {
              Është gjithashtu një opsion buxhetor, duke e bërë atë të qasshëm për një gamë të gjerë 
              të konsumatorëve
           </p>
-          <button className="mt-8 border-[2px] hover:bg-white hover:text-[#249A70] border-white px-[12px] py-[8px] text-white rounded-md font-semibold">Shiko produktin</button>
+          <Link to={`/produktet-tona/${firstProduct.id}`} onClick={() => window.scrollTo({top: 0,left: 0})}>
+           <button className="mt-8 border-[2px] hover:bg-white hover:text-[#249A70] border-white px-[12px] py-[8px] text-white rounded-md font-semibold">Shiko produktin</button>
+          </Link>
         </div>
       </div>
     </div>
@@ -39,7 +46,9 @@ const FourDiv = () => {
             lulediellit Floil ka një aromë neutrale, që do të thotë se nuk do të mposhtë 
             shijen e ushqimit tuaj.
         </p>
-        <button className="mt-8 border-[2px] hover:bg-[#434343] hover:text-white border-[#434343] px-[12px] py-[8px] text-[#434343] rounded-md font-semibold">Shiko produktin</button>
+        <Link to={`/produktet-tona/${secondProduct.id}`} onClick={() => window.scrollTo({top: 0,left: 0})}>
+          <button className="mt-8 border-[2px] hover:bg-[#434343] hover:text-white border-[#434343] px-[12px] py-[8px] text-[#434343] rounded-md font-semibold">Shiko produktin</button>
+        </Link>
 </div>
       </div>
       <div className="lg:w-1/2 mt-4 lg:mt-0">

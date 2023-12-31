@@ -48,9 +48,9 @@ const Refinery = () => {
             y="50%"
             dominantBaseline="middle"
             textAnchor="middle"
-            fontSize="36"
+            fontSize="16"
             fill="#F3C24E"
-            className='firstOnCricle font-sans1 font-semibold'
+            className='firstOnCricle font-sans font-semibold'
             variants={textVariants}
           >
             100%
@@ -73,9 +73,9 @@ const Refinery = () => {
             y="50%"
             dominantBaseline="middle"
             textAnchor="middle"
-            fontSize="28"
+            fontSize="16"
             fill="#F3C24E"
-            className='firstOnCricle font-sans1 font-semibold'
+            className='firstOnCricle font-sans font-semibold'
             variants={textVariants}
           >
             Vendor
@@ -104,9 +104,9 @@ const Refinery = () => {
             y="50%"
             dominantBaseline="middle"
             textAnchor="middle"
-            fontSize="28"
+            fontSize="16"
             fill="#F3C24E"
-            className='firstOnCricle font-sans1 font-semibold'
+            className='firstOnCricle font-sans font-semibold'
             variants={textVariants}
           >
             2017
@@ -128,9 +128,9 @@ const Refinery = () => {
             y="50%"
             dominantBaseline="middle"
             textAnchor="middle"
-            fontSize="24"
+            fontSize="16"
             fill="#F3C24E"
-            className='firstOnCricle font-sans1 font-semibold'
+            className='firstOnCricle font-sans font-semibold'
             variants={textVariants}
           >
             Vaj
