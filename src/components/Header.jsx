@@ -22,7 +22,7 @@ const Header = () => {
   
 
   return (
-    <header className={`h-[100px] px-5 lg:px-[124px] font-sans text-[15px] font-normal ${
+    <header className={`z-50 sticky top-0 left-0 w-full h-[100px] px-5 lg:px-[124px] font-sans text-[15px] font-normal ${
         location.pathname === '/floil-cares' ? 'bg-white' : 'bg-[#DEB34C]'
     }`}>
       <div className="flex items-center justify-between h-full">

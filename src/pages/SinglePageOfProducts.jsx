@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import bannerVec from "../components/assets/bannerVector.png";
 import bannerProductVector from "../components/assets/vectorOnProduct.png"
 import { products } from '../data/products';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const SinglePageOfProducts = () => {
+    const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    } else {
+      controls.start('hidden');
+    }
+  }, [controls, inView]);
     const { productID } = useParams();
 
     const product = products?.find((product) => product.id == productID)
@@ -25,9 +37,22 @@ const SinglePageOfProducts = () => {
         </div>
         
         <div className='w-full flex flex-col lg:flex-row lg:px-[151px]'>
-            <div className='lg:w-1/2 z-40'>
-                <img className='w-72 mx-auto lg:mx-0 h-auto lg:w-[414px] lg:h-[767px] lg:object-cover' src={image} alt={title} />
-            </div>
+            <motion.div
+                ref={ref}
+                initial="hidden"
+                animate={controls}
+                variants={{
+                    visible: { filter: 'blur(0)', transition: { duration: 2 } },
+                    hidden: { filter: 'blur(80px)' }
+                }}
+                className='lg:w-1/2 z-40'
+                >
+                <motion.img
+                    className='w-72 mx-auto lg:mx-0 h-auto lg:w-[414px] lg:h-[767px] lg:object-cover'
+                    src={image}
+                    alt={title}
+                />
+            </motion.div>
             <div className='px-4 lg:w-1/2 mt-6 lg:mt-[123px]'>
                 <p className='text-[35px] text-[#434343] font-semibold'>{secondTitle}</p>
                 <p className='mt-6 lg:mt-[39px] text-[15px] text-[#848484] font-normal'>{paraRight}</p>
